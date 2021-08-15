@@ -32,9 +32,10 @@ export class ProductService
         return this._productModel.find(filter).exec();
     }
 
-    async updateProduct(productId: string): Promise<ProductModel>
+    async updateProduct(productId: string)// : Promise<ProductModel>
     {
         let id = Types.ObjectId(productId);
-        return this._productModel.update({ _id: id }, { $set: { name: 'Producto actualizado' } });
+        return 1;
+        //return this._productModel.updateOne({ _id: id }, { $set: { name: 'Producto actualizado' } });
     }
 }
